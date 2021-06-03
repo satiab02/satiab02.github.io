@@ -1,0 +1,43 @@
+
+
+body{
+  background-color: black;
+  background-image: url(graphics/star\ background.gif)
+}
+
+h1{
+  color: brown;
+  font-size: 60px;
+}
+
+h2{
+  color: white
+}
+
+h3{
+  color: white
+}
+
+h4{
+  color: red
+}
+
+p{
+  color: white;
+}
+
+
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+div {
+  background-color: black;
+  width:90%;
+  border: 15px solid antiquewhite;
+  padding: 50px, 50px, 50px, 50px;
+  margin: 50px;
+}

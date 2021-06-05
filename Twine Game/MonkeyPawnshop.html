@@ -16,7 +16,9 @@
   font-size: 125%;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home Page" tags="" position="400,201" size="100,100">
+tw-sidebar{
+    display: none;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home Page" tags="" position="400,201" size="100,100">
 &lt;h1&gt; Welcome To the Store &lt;/h1&gt;
 &lt;img src=&quot;images/Pawn Shop Backgroud.png&quot; /&gt;
 
@@ -75,7 +77,7 @@ You look amoungst the dolls in the box. You see a victorian school boy doll. You
 
 You buy the doll with a few weird looks from the clerk before you [[leave the store| Doll Ending Part 1]]
 
-&lt;small&gt;&lt;img src=&quot;images/doll.jpeg&quot; /&gt;&lt;small&gt;</tw-passagedata><tw-passagedata pid="8" name="Dried Alligator Foot" tags="" position="235,702" size="100,100">&lt;img src=&quot;images/dried aligator foot&quot; /&gt;
+&lt;small&gt;&lt;img src=&quot;images/doll.jpeg&quot; /&gt;&lt;small&gt;</tw-passagedata><tw-passagedata pid="8" name="Dried Alligator Foot" tags="" position="235,702" size="100,100">&lt;img src=&quot;images/dried aligator foot.jpg&quot; /&gt;
 
 You express your delight as you finalize your purchase. You tell the clerk that this the only place in town that seems to sell this ingredient.
 
@@ -100,11 +102,14 @@ $doll Ill Mannered Doll
 $rosequartz Rose quartz
 $moldavite Moldavite stones
 $jade Jade Pendants
-$brokenwatch broken time machines
+$brokenwatch Broken time machines
 $youthwater Bottle(s) of Fountian of Youth Water
 $goldenbeetle Curse beetles
+$potion Potion(s)
 
-(if: $timemachine&gt;0)[$timemachine Time Machines]</tw-passagedata><tw-passagedata pid="10" name="Somthing else. . ." tags="" position="547,704" size="100,100">&quot;Oh okay... Well we got a few new things in last week. Here-&quot;
+(if: $timemachine&gt;0)[$timemachine Time Machines]
+
+[[Replay?|Home Page]] </tw-passagedata><tw-passagedata pid="10" name="Somthing else. . ." tags="" position="547,704" size="100,100">&quot;Oh okay... Well we got a few new things in last week. Here-&quot;
 
 
 [[Broken Watch]]
@@ -123,6 +128,7 @@ The clerk hands you an application form to fill out.
 
 You begin filling out your information, but it quickly became [[strange.|Good Luck Charms]]</tw-passagedata><tw-passagedata pid="12" name="Broken Watch" tags="" position="427,851" size="100,100">(set: $brokenwatch to ($brokenwatch +1))
 
+&lt;img src=images/brokenwatch.png /&gt;
 
 You pocket the broken watch, and [[walk out with it]]
 
@@ -283,12 +289,12 @@ You turn to see where the voice came from. To your horror, the doll was glaring 
 
 [[Huh? What watch?| Doll Bad Ending: Part 1]]
 
-(if: $brokenwatch&gt;0)[[yes]]</tw-passagedata><tw-passagedata pid="27" name=" Doll Bad Ending: Part 1" tags="" position="54,1402" size="100,100">&quot;Damnit! Of course you don&#39;t have it. If you were dumb enough to buy a doll...Weirdo.&quot;
+(if: $brokenwatch&gt;0)[[Yes]]</tw-passagedata><tw-passagedata pid="27" name=" Doll Bad Ending: Part 1" tags="" position="54,1402" size="100,100">&quot;Damnit! Of course you don&#39;t have it. If you were dumb enough to buy a doll...Weirdo.&quot;
 
 &quot;I can just go back-&quot;
 
 &quot;You can&#39;t &lt;i&gt;just&lt;/i&gt; go [[back| Doll Bad Ending: Part 2]].&quot;
-   </tw-passagedata><tw-passagedata pid="28" name="yes" tags="" position="174,1401" size="100,100">&quot;Listen kid, I&#39;ve been in the shop for many years. And I think I have way to solve both of our problems.&quot;
+   </tw-passagedata><tw-passagedata pid="28" name="Yes" tags="" position="174,1401" size="100,100">&quot;Listen kid, I&#39;ve been in the shop for many years. And I think I have way to solve both of our problems.&quot;
 
 &quot;Our problems?&quot;
 
@@ -359,11 +365,11 @@ You must make a wish
 </tw-passagedata><tw-passagedata pid="38" name="1" tags="" position="1000,930" size="100,100">SPOLIER! You die! Magic isn&#39;t free :/
 
 [[Thank you for Playing]]
-</tw-passagedata><tw-passagedata pid="39" name="2" tags="" position="1119,931" size="100,100">SPOLIER! You die!
+</tw-passagedata><tw-passagedata pid="39" name="2" tags="" position="1129,927.6666666666666" size="100,100">SPOLIER! You die!
 
 But at least you helped a friend :)
 
-[[Thank you for Playing]] </tw-passagedata><tw-passagedata pid="40" name="3" tags="" position="1229.3333333333333,924.6666666666666" size="100,100">(set: $doll to 0)
+[[Thank you for Playing]] </tw-passagedata><tw-passagedata pid="40" name="3" tags="" position="1252.6666666666665,929.6666666666666" size="100,100">(set: $doll to 0)
 The doll left with the bottle of liquid as soon it became a real boy. he didn&#39;t even say thank you :(
 
 

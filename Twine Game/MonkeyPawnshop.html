@@ -77,7 +77,7 @@ You look amoungst the dolls in the box. You see a victorian school boy doll. You
 
 You buy the doll with a few weird looks from the clerk before you [[leave the store| Doll Ending Part 1]]
 
-&lt;small&gt;&lt;img src=&quot;images/doll.jpeg&quot; /&gt;&lt;small&gt;</tw-passagedata><tw-passagedata pid="8" name="Dried Alligator Foot" tags="" position="235,702" size="100,100">&lt;img src=&quot;images/dried aligator foot.jpg&quot; /&gt;
+&lt;small&gt;&lt;img src=&quot;images/doll.jpeg&quot; /&gt;&lt;small&gt;</tw-passagedata><tw-passagedata pid="8" name="Dried Alligator Foot" tags="" position="235,702" size="100,100">
 
 You express your delight as you finalize your purchase. You tell the clerk that this the only place in town that seems to sell this ingredient.
 
@@ -136,15 +136,19 @@ You pocket the broken watch, and [[walk out with it]]
 
 
 
-</tw-passagedata><tw-passagedata pid="13" name="Golden Beetle" tags="" position="547,851" size="100,100">
+</tw-passagedata><tw-passagedata pid="13" name="Golden Beetle" tags="" position="547,852" size="100,100">
+(set: $goldenbeetle to ($goldenbeetle +1))
+
 &lt;img src=images/goldenbeetle.jpeg /&gt;
 
 Why would you pick this one? Are begging for an Eygtian Curse??
 
-(set: $goldenbeetle to ($goldenbeetle +1))
-(if: $loop&gt;0)[[..or maybe you are trying to 100% the game? Thank you!|Thank you for Playing]]
 
-[[Here&#39; s your L, bro|Thank you for Playing]]</tw-passagedata><tw-passagedata pid="14" name="Super Old Alcohol?" tags="" position="667,850" size="100,100">((set: $youthwater to ($youthwater +1))
+
+(if: $loop&gt;0)[..or maybe you are trying to 100% the game? Thank you!]
+(if: $loop&gt;0)[[loop|loop]]
+
+[[Here&#39; s your L, bro|Thank you for Playing]]</tw-passagedata><tw-passagedata pid="14" name="Super Old Alcohol?" tags="" position="667,850" size="100,100">(set: $youthwater to ($youthwater +1))
 
 &lt;img src=&quot;images/youthwater.png&quot; /&gt;
 
@@ -152,9 +156,8 @@ Once you are home, you notice you are quite thirsty
 
 You pour and drink a glass full of the [[liquid|Fountian of Youth Ending]].
 
-or
 
-(if: $loop&gt;0)You drink somthing else, and [[loop]]</tw-passagedata><tw-passagedata pid="15" name="Moneky Paw" tags="" position="851,757" size="100,100">&lt;img src=&quot;images/monkey paw-1.png&quot; /&gt;
+(if: $loop&gt;0)[or, you drink somthing else, and [[loop]]]</tw-passagedata><tw-passagedata pid="15" name="Moneky Paw" tags="" position="851,757" size="100,100">&lt;img src=&quot;images/monkey paw-1.png&quot; /&gt;
 &quot;Nope, I don&#39;t&quot;
 
 &quot;I mean, its literaly in the store&#39;s name, stop giving me a hard time,&quot; you say as years of fustrastion from looking for the item  for year bubbles to the surface.
@@ -199,7 +202,6 @@ or
 </tw-passagedata><tw-passagedata pid="21" name="Witch Ending" tags="" position="296,1007" size="100,100">(set: $goodluck to ($goodluck +1))
 (set: $potion to ($potion +1))
 
-&lt;img src=&quot;images/potion.png&quot; /&gt;
 
 You bring the ingredient home. You finalize your good luck potion
 
@@ -210,7 +212,7 @@ Now you may even be able ot get a job. Even in this [[economy|Thank you for Play
 
 (if: $loop&gt;0)[[loop]]
 
-</tw-passagedata><tw-passagedata pid="22" name="Alligator Soup Ending" tags="" position="177,1003" size="100,100">(set: $soup to ($soup +1))
+</tw-passagedata><tw-passagedata pid="22" name="Alligator Soup Ending" tags="" position="177,1004" size="100,100">(set: $soup to ($soup +1))
 
 
 
@@ -220,7 +222,8 @@ You are so proud of soup that you want to bring to back to the pawn shop. That c
 
 Unfortunaly, you never found the building [[again|Thank you for Playing]]
 
-(if: $loop&gt;0)[[loop]] She gotta taste this soup!</tw-passagedata><tw-passagedata pid="23" name="Moldavite Ending" tags="" position="399,1282" size="100,100">(set: $moldavite to ($moldavite +1))
+(if: $loop&gt;0)[ She gotta taste this soup!]
+(if: $loop&gt;0)[[loop]]</tw-passagedata><tw-passagedata pid="23" name="Moldavite Ending" tags="" position="399,1282" size="100,100">(set: $moldavite to ($moldavite +1))
 
 &lt;img src=&quot;images/moldavite.jpeg&quot; /&gt;
 
@@ -273,7 +276,7 @@ You don&#39;t want any more fortune
 [[You need to return this cyrstal!|The Store Dissappered!]]
 
 
-(if: $loop&gt;0)[[loop]]</tw-passagedata><tw-passagedata pid="26" name=" Doll Ending Part 1" tags="" position="121,1249" size="100,100">((set: $doll to ($doll +1))
+(if: $loop&gt;0)[[loop]]</tw-passagedata><tw-passagedata pid="26" name=" Doll Ending Part 1" tags="" position="121,1249" size="100,100">(set: $doll to ($doll +1))
 
 When you get home, you become fustrasted with your purchase. You aren&#39;t sure why you bought it. 
 
@@ -337,10 +340,12 @@ And now you have a new [[roomate|Thank you for Playing]] </tw-passagedata><tw-pa
 
 or
 
-(if: $brokenwatch&gt;0)&quot;yeah, about that,&quot; you say as you [[show the Broken Watch| Fixes watch]]
+(if: $brokenwatch&gt;0)[&quot;yeah, about that,&quot; you say as you [[show the Broken Watch| Fixes watch]]]
+
+or
 
 (if: $doll&gt;0) [[Could you help me with this?]]</tw-passagedata><tw-passagedata pid="32" name="loop" tags="" position="942,1433" size="100,100">(set: $loop to ($loop +1))
-(goto: &quot;Walk in&quot;)</tw-passagedata><tw-passagedata pid="33" name="&quot;This is my first time here,&quot;" tags="" position="581,336" size="100,100">&quot;oh, my [[mistake|Walk in]].&quot;</tw-passagedata><tw-passagedata pid="34" name=" Fixes watch" tags="" position="816,235" size="100,100">
+(goto: &quot;Walk in&quot;)</tw-passagedata><tw-passagedata pid="33" name="&quot;This is my first time here,&quot;" tags="" position="581,336" size="100,100">&quot;oh, my [[mistake|Walk in]].&quot;</tw-passagedata><tw-passagedata pid="34" name=" Fixes watch" tags="" position="816,236" size="100,100">
 &quot;Can you fix it?&quot; you ask.
 
 &quot;Yeah, it&#39;ll cost you every item in the store. Do you have everthing with you?&quot;
@@ -364,15 +369,25 @@ You must make a wish
 [[Selfless Wish|2]]
 (if: $doll&gt;0)[[Help the Doll|3]]
 
-</tw-passagedata><tw-passagedata pid="38" name="1" tags="" position="1000,930" size="100,100">SPOLIER! You die! Magic isn&#39;t free :/
+</tw-passagedata><tw-passagedata pid="38" name="1" tags="" position="1000,930" size="100,100">
+
+
+SPOLIER! You die! Magic isn&#39;t free :/
 
 [[Thank you for Playing]]
-</tw-passagedata><tw-passagedata pid="39" name="2" tags="" position="1129,927" size="100,100">SPOLIER! You die!
+</tw-passagedata><tw-passagedata pid="39" name="2" tags="" position="1130,927" size="100,100">
+
+
+SPOLIER! You die!
 
 But at least you helped a friend :)
 
 [[Thank you for Playing]] </tw-passagedata><tw-passagedata pid="40" name="3" tags="" position="1252,929" size="100,100">(set: $doll to 0)
-The doll left with the bottle of liquid as soon it became a real boy. he didn&#39;t even say thank you :(
+
+
+The doll left with the bottle of liquid as soon it became a real boy. 
+
+He didn&#39;t even say thank you :(
 
 
 You make another [[wish.| Wishes]] 
@@ -383,7 +398,7 @@ or
 
 or
 
-[[loop]]</tw-passagedata><tw-passagedata pid="41" name="Time Traveler Ending" tags="" position="1020,131" size="100,100">(set: $rabbitfoot to 0) (set: $potion to 0)(set: $doll to 0)(set: $soup to 0)(set: $rosequartz to 0)(set: $moldavite to 0)(set : $jade to0)(set: $youthwater to 0)(set: $goldenbeetle to 0)
+[[loop]]</tw-passagedata><tw-passagedata pid="41" name="Time Traveler Ending" tags="" position="1020,131" size="100,100">(set: $rabbitfoot to 0) (set: $potion to 0)(set: $doll to 0)(set: $soup to 0)(set: $rosequartz to 0)(set: $moldavite to 0)(set: $jade to 0)(set: $youthwater to 0)(set: $goldenbeetle to 0) (set: $timemachine to 1)
 
 The clerk fixes the watch for you before handing it back. She explains its a time machine. 
 
